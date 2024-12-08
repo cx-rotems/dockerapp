@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: /dockerapp
+    working_directory: ~/dockerapp
     docker:
       - image: cimg/python:3.9-node
     steps:
