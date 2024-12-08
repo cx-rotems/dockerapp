@@ -10,10 +10,10 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            apk add --no-cache py-pip curl
+            apk add --no-cache py-pip curl ca-certificates
+            update-ca-certificates
             pip install --upgrade pip
-            pip install certifi
-            pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host pypi.org docker-compose==1.15.0
+            pip install docker-compose
       - run:
           name: Run tests
           command: |
